@@ -656,80 +656,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.block {
-  margin-top: 30px;
-}
-
-.block-categories,
-.widget,
-.news-feature {
-  margin-bottom: 30px;
-}
-
-/*頭條新聞*/
-.news-feature .title {
-  text-align: center;
-  font-size: 40px;
-  line-height: 1.2;
-}
-
-/*新聞列表連結*/
-.card .nav-link {
-  font-size: 13px;
-  font-weight: 300;
-}
-
-.card .card-content {
-  font-weight: 300;
-}
-
-/*區塊標題*/
-.block-title {
-  font-size: 14px;
-  font-weight: 800;
-  color: #000;
-}
-
-/*頁尾*/
-.site-footer {
-  padding: 30px 0;
-}
-
-.site-footer .nav-link {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.site-footer .block-title {
-  font-size: 20px;
-  margin-bottom: 0;
-  font-weight: 800;
-}
-
-.site-secondary {
-  background-color: #f1f1f1;
-  padding: 0 0 30px 0;
-}
-
-.site-secondary .block-title {
-  margin-top: 30px;
-}
-
-.site-secondary .card {
-  background-color: #fff;
-  box-shadow: none;
-}
-
-/*調整*/
-.dark-bg .nav-link {
-  font-size: 13px;
-  color: #ccc;
-}
-
-.dark-bg .block-title {
-  color: #fff;
-}
-
 /*theme-full-with-sidebar*/
 .theme-full-with-sidebar {
   background-color: #f1f1f1;
@@ -756,4 +682,120 @@ h1, h2, h3, h4, h5, h6 {
 .theme-full-with-sidebar .post {
   padding: 30px;
   margin: 0;
+}
+
+.card .nav-link {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.card .card-content {
+  font-weight: 300;
+}
+
+.block {
+  margin-top: 30px;
+}
+
+.block-categories,
+.widget,
+.news-feature {
+  margin-bottom: 30px;
+}
+
+.news-feature .title {
+  text-align: center;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+/*區塊標題*/
+.block-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: #000;
+}
+
+/*調整*/
+.dark-bg .nav-link {
+  font-size: 13px;
+  color: #ccc;
+}
+
+.dark-bg .block-title {
+  color: #fff;
+}
+
+.img-fluid {
+  cursor: pointer;
+}
+
+.site-header .down-nav {
+  position: absolute;
+  width: 100%;
+  top: 64px;
+  background: rgba(0, 0, 0, 0.9);
+  border-top: 1px solid gray;
+  display: none;
+}
+
+.site-header .down-nav > div {
+  padding: 5px 15px;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.site-header .down-nav > div > div {
+  padding: 0 20px;
+}
+
+.site-header .down-nav > div:hover {
+  background: gray;
+  opacity: 0.9;
+}
+
+@media (max-width: 993px) {
+  .site-header .site-header-toggle {
+    display: block;
+  }
+  .site-header .site-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 994px) {
+  .site-header .site-header-toggle {
+    display: none;
+  }
+  .site-header .site-menu {
+    display: block;
+  }
+}
+
+.site-secondary {
+  background-color: #f1f1f1;
+  padding: 0 0 30px 0;
+}
+
+.site-secondary .block-title {
+  margin-top: 30px;
+}
+
+.site-secondary .card {
+  background-color: #fff;
+  box-shadow: none;
+}
+
+.site-footer {
+  padding: 30px 0;
+}
+
+.site-footer .nav-link {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.site-footer .block-title {
+  font-size: 20px;
+  margin-bottom: 0;
+  font-weight: 800;
 }

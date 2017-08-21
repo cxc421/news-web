@@ -1,0 +1,48 @@
+.site-header {
+	.down-nav {
+		position: absolute;
+		width: 100%;				
+		top: 64px;
+		background: rgba(0,0,0,0.9);
+		//padding-bottom: 10px;
+		border-top: 1px solid gray;
+		display: none;
+		&>div {
+			padding: 5px 15px;
+			background: rgba(0,0,0,0.9);
+			&>div {
+				padding: 0 20px;
+			}
+			&:hover {
+				background: gray;
+				opacity: 0.9;
+			}
+		}
+	}
+}
+
+
+
+@media (max-width: 993px) {
+	.site-header {
+		.site-header-toggle {
+			display: block;
+		}
+		.site-menu {
+			display: none;
+		}
+	}	
+}
+
+@media (min-width: 994px) {
+	.site-header {
+		.site-header-toggle {
+			display: none;
+		}
+		.site-menu {
+			display: block;
+		}
+	}	
+}
+
+
