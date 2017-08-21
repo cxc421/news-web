@@ -32,6 +32,10 @@ a:hover {
   border-radius: 50%;
 }
 
+input[type=checkbox] {
+  margin-right: 10px;
+}
+
 /*container*/
 .container-fluid,
 .container {
@@ -610,6 +614,46 @@ h1, h2, h3, h4, h5, h6 {
 
 .dark-bg a:hover {
   color: rgba(255, 255, 255, 0.6);
+}
+
+/*上下距離*/
+.m-t-15 {
+  margin-top: 15px;
+}
+
+.m-t-30 {
+  margin-top: 30px;
+}
+
+.m-b-15 {
+  margin-bottom: 15px;
+}
+
+.m-b-30 {
+  margin-bottom: 30px;
+}
+
+.m-y-15 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.m-y-30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/*選擇性隱藏*/
+@media (max-width: 767px) {
+  .sm-hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .md-hidden {
+    display: none;
+  }
 }
 
 .block {

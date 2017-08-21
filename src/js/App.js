@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Nav from './Nav';
+import Card from './Card';
+
 //import Nav from './Nav';
 import img_1 from '../img/demo/1.jpeg';
 import img_2 from '../img/demo/2.jpeg';
@@ -21,15 +24,9 @@ class App extends Component {
 					
 						{/* <a className="pull-right site-header-toggle" href="#">&#9776;</a> */}
 											
-						<nav className="nav site-menu pull-right">
-							<a href="#" className="nav-link">Money</a>
-							<a href="#" className="nav-link">Entertainment</a>
-							<a href="#" className="nav-link active">Tech</a>
-							<a href="#" className="nav-link">Sport</a>
-							<a href="#" className="nav-link">Style</a>
-							<a href="#" className="nav-link">Video</a>
-						</nav>
-
+						<Nav bsClass="site-menu pull-right"
+								 type="nav"
+								 content={['Money', 'Entertainment', 'Tech', 'Sport', 'Style', 'Video']} />
 					</div>
 				</header>
 				
@@ -52,31 +49,32 @@ class App extends Component {
 									<div className="row">
 										<div className="col-sm-6">
 											<div className="news-spotlight">
-												<div className="card">
-													<div className="card-img">
-														<img className="img-fluid" src={img_3} alt="" />
-													</div>
-													<ul className="nav">
-														<li><a href="#" className="nav-link">Bringing Nature Back in the Heart of London</a></li>
-										        <li><a href="#" className="nav-link">Obama Jokes About The Last Time He Was This High </a></li>
-										        <li><a href="#" className="nav-link">Kenya's Ivory Burn Sends Clear, Striking Message</a></li>
-										        <li><a href="#" className="nav-link">From the Ivory Tower Kitchen: The Real Victims of the Farm-to-Fable Controversy</a></li>
-													</ul>
-												</div>
+
+												<Card img={img_3}>
+													<Nav type="ul"
+															 content={['Bringing Nature Back in the Heart of London',
+															 					 'Obama Jokes About The Last Time He Was This High',
+															 					 "Kenya's Ivory Burn Sends Clear, Striking Message",
+															 					 "From the Ivory Tower Kitchen: The Real Victims of the Farm-to-Fable Controversy"]} />
+
+												</Card>
+
 											</div>
 										</div>
 										<div className="col-sm-6">
 											<div className="ads m-b-30">
 												<img className="img-fluid" src={img_2} alt="" />
 											</div>
-											<div className="card">
+
+											<Card >
 												<div className="card-content">
 													<h4 className="title">
 														What Makes Great Product Design?
 													</h4>
-													<p>Global warming, or climate change, is an increase in the earth's atmospheric temperature since the late nineteenth century.  </p>
-												</div>
-											</div>
+													<p>Global warming, or climate change, is an increase in the earth's atmospheric temperature since the late nineteenth century. </p>
+												</div>												
+											</Card>
+
 										</div>
 									</div>
 
@@ -86,35 +84,35 @@ class App extends Component {
 									{/* 綠色：即時新聞或可替換內容。 */}
 									<div className="widget">
 										<h3 className="block-title">The World Post</h3>
-										<div className="card">
-											<ul className="nav">
-												<li><a href="#" className="nav-link">Eagles Feed Cat To Chicks On Live Cam, Prove Nature Is Horrific</a></li>
-								        <li><a href="#" className="nav-link">The Myth Surrounding Baby Songbirds</a></li>
-								        <li><a href="#" className="nav-link">Hey, Environmentalists - Stop Being Such Dicks</a></li>
-								        <li><a href="#" className="nav-link">n Memory of the Woman Who Helped Bears in Distress</a></li>
-								        <li><a href="#" className="nav-link">The Climate Post: Study Says Half a Degree Matters</a></li>
-											</ul>
-										</div>
+										<Card>
+											<Nav type="ul"
+													 content={['Eagles Feed Cat To Chicks On Live Cam, Prove Nature Is Horrific',
+													 					 'The Myth Surrounding Baby Songbirds',
+													 					 "Hey, Environmentalists - Stop Being Such Dicks",
+													 					 "n Memory of the Woman Who Helped Bears in Distress",
+													 					 "The Climate Post: Study Says Half a Degree Matters"]} />																					
+										</Card>
 									</div>
 									<div className="widget">
 										<h3 className="block-title">News and buzz</h3>
-										<div className="card">
-											<ul className="nav">
-												<li><a href="#" className="nav-link">Rosberg speeds to win in front of Putin</a></li>
-								        <li><a href="#" className="nav-link">Circus elephants perform last show</a></li>
-								        <li><a href="#" className="nav-link">Spoilers are coming! Jon Snow is...</a></li>
-								        <li><a href="#" className="nav-link">ISIS claims Hindu tailor hack murder</a></li>
-								        <li><a href="#" className="nav-link">The 5000-1 Premier League champions?</a></li>
-								        <li><a href="#" className="nav-link">Clashes in Germany, hundreds arrested</a></li>
-											</ul>
-										</div>
+										<Card>
+											<Nav type="ul"
+													 content={['Rosberg speeds to win in front of Putin',
+													 					 'Circus elephants perform last show',
+													 					 "Spoilers are coming! Jon Snow is...",
+													 					 "ISIS claims Hindu tailor hack murder",
+													 					 "The 5000-1 Premier League champions?",
+													 					 "Clashes in Germany, hundreds arrested"]} />																				
+										</Card>
 									</div>
 									<div className="widget">
-										<div className="card">
+
+										<Card>
 											<div className="card-content">
 												<h4 className="title">
 													Should the government increase environmental regulations to prevent global warming?
-												</h4>
+												</h4>																	
+
 												<ul className="nav m-y-15">
 													<li>
 														<input type="checkbox" />
@@ -127,7 +125,8 @@ class App extends Component {
 												</ul>
 												<a href="" className="button button-blue">Learn more about Global Warming</a>
 											</div>
-										</div>
+										</Card>
+
 									</div>
 
 								</div>
@@ -151,12 +150,11 @@ class App extends Component {
 										<div className="card-img">
 											<img className="img-fluid" src={img_4} alt="" />
 										</div>
-										<ul className="nav">
-											<li><a href="#" className="nav-link">Bringing Nature Back in the Heart of London</a></li>
-							        <li><a href="#" className="nav-link">Obama Jokes About The Last Time He Was This High </a></li>
-							        <li><a href="#" className="nav-link">Kenya's Ivory Burn Sends Clear, Striking Message</a></li>
-							        <li><a href="#" className="nav-link">From the Ivory Tower Kitchen: The Real Victims of the Farm-to-Fable Controversy</a></li>
-										</ul>
+											<Nav type="ul"
+													 content={['Bringing Nature Back in the Heart of London',
+													 					 'Obama Jokes About The Last Time He Was This High',
+													 					 "Kenya's Ivory Burn Sends Clear, Striking Message",
+													 					 "From the Ivory Tower Kitchen: The Real Victims of the Farm-to-Fable Controversy"]} />
 									</div>
 								</div>
 
@@ -167,12 +165,11 @@ class App extends Component {
 										<div className="card-img">
 											<img className="img-fluid" src={img_5} alt="" />
 										</div>
-										<ul className="nav">
-											<li><a href="#" className="nav-link">Bringing Nature Back in the Heart of London</a></li>
-							        <li><a href="#" className="nav-link">Obama Jokes About The Last Time He Was This High </a></li>
-							        <li><a href="#" className="nav-link">Kenya's Ivory Burn Sends Clear, Striking Message</a></li>
-							        <li><a href="#" className="nav-link">From the Ivory Tower Kitchen: The Real Victims of the Farm-to-Fable Controversy</a></li>
-										</ul>
+										<Nav type="ul"
+												 content={['Bringing Nature Back in the Heart of London',
+												 					 'Obama Jokes About The Last Time He Was This High',
+												 					 "Kenya's Ivory Burn Sends Clear, Striking Message",
+												 					 "From the Ivory Tower Kitchen: The Real Victims of the Farm-to-Fable Controversy"]} />
 									</div>
 								</div>
 
@@ -183,12 +180,11 @@ class App extends Component {
 										<div className="card-img">
 											<img className="img-fluid" src={img_6} alt="" />
 										</div>
-										<ul className="nav">
-											<li><a href="#" className="nav-link">Bringing Nature Back in the Heart of London</a></li>
-							        <li><a href="#" className="nav-link">Obama Jokes About The Last Time He Was This High </a></li>
-							        <li><a href="#" className="nav-link">Kenya's Ivory Burn Sends Clear, Striking Message</a></li>
-							        <li><a href="#" className="nav-link">From the Ivory Tower Kitchen: The Real Victims of the Farm-to-Fable Controversy</a></li>
-										</ul>
+										<Nav type="ul"
+												 content={['Bringing Nature Back in the Heart of London',
+												 					 'Obama Jokes About The Last Time He Was This High',
+												 					 "Kenya's Ivory Burn Sends Clear, Striking Message",
+												 					 "From the Ivory Tower Kitchen: The Real Victims of the Farm-to-Fable Controversy"]} />
 									</div>
 								</div>
 
@@ -199,12 +195,11 @@ class App extends Component {
 										<div className="card-img">
 											<img className="img-fluid" src={img_7} alt="" />
 										</div>
-										<ul className="nav">
-											<li><a href="#" className="nav-link">Bringing Nature Back in the Heart of London</a></li>
-							        <li><a href="#" className="nav-link">Obama Jokes About The Last Time He Was This High </a></li>
-							        <li><a href="#" className="nav-link">Kenya's Ivory Burn Sends Clear, Striking Message</a></li>
-							        <li><a href="#" className="nav-link">From the Ivory Tower Kitchen: The Real Victims of the Farm-to-Fable Controversy</a></li>
-										</ul>
+										<Nav type="ul"
+												 content={['Bringing Nature Back in the Heart of London',
+												 					 'Obama Jokes About The Last Time He Was This High',
+												 					 "Kenya's Ivory Burn Sends Clear, Striking Message",
+												 					 "From the Ivory Tower Kitchen: The Real Victims of the Farm-to-Fable Controversy"]} />
 									</div>
 								</div>
 
@@ -215,12 +210,11 @@ class App extends Component {
 										<div className="card-img">
 											<img className="img-fluid" src={img_8} alt="" />
 										</div>
-										<ul className="nav">
-											<li><a href="#" className="nav-link">Bringing Nature Back in the Heart of London</a></li>
-							        <li><a href="#" className="nav-link">Obama Jokes About The Last Time He Was This High </a></li>
-							        <li><a href="#" className="nav-link">Kenya's Ivory Burn Sends Clear, Striking Message</a></li>
-							        <li><a href="#" className="nav-link">From the Ivory Tower Kitchen: The Real Victims of the Farm-to-Fable Controversy</a></li>
-										</ul>
+										<Nav type="ul"
+												 content={['Bringing Nature Back in the Heart of London',
+												 					 'Obama Jokes About The Last Time He Was This High',
+												 					 "Kenya's Ivory Burn Sends Clear, Striking Message",
+												 					 "From the Ivory Tower Kitchen: The Real Victims of the Farm-to-Fable Controversy"]} />
 									</div>
 								</div>
 
@@ -231,12 +225,11 @@ class App extends Component {
 										<div className="card-img">
 											<img className="img-fluid" src={img_9} alt="" />
 										</div>
-										<ul className="nav">
-											<li><a href="#" className="nav-link">Bringing Nature Back in the Heart of London</a></li>
-							        <li><a href="#" className="nav-link">Obama Jokes About The Last Time He Was This High </a></li>
-							        <li><a href="#" className="nav-link">Kenya's Ivory Burn Sends Clear, Striking Message</a></li>
-							        <li><a href="#" className="nav-link">From the Ivory Tower Kitchen: The Real Victims of the Farm-to-Fable Controversy</a></li>
-										</ul>
+										<Nav type="ul"
+												 content={['Bringing Nature Back in the Heart of London',
+												 					 'Obama Jokes About The Last Time He Was This High',
+												 					 "Kenya's Ivory Burn Sends Clear, Striking Message",
+												 					 "From the Ivory Tower Kitchen: The Real Victims of the Farm-to-Fable Controversy"]} />
 									</div>
 								</div>
 							</div>
@@ -253,54 +246,50 @@ class App extends Component {
 							<div className="col-sm-6 col-md-3">
 								{/* 其他選單 */}
 								<h3 className="block-title">Regions</h3>
-								<ul className="nav">
-									<li><a href="#" className="nav-link">Quote board</a></li>
-					        <li><a href="#" className="nav-link">Best of 2013</a></li>
-					        <li><a href="#" className="nav-link">Showbiz tonight</a></li>
-					        <li><a href="#" className="nav-link">Fall entertainment 2013</a></li>
-					        <li><a href="#" className="nav-link">Photo gallery</a></li>
-					        <li><a href="#" className="nav-link">Music</a></li>
-					        <li><a href="#" className="nav-link">Let's talk tv</a></li>
-								</ul>
+								<Nav type="ul"
+										 content={['Quote board',
+										 					 'Best of 2013',
+										 					 "Showbiz tonight",
+										 					 "Fall entertainment 2013",
+										 					 "Photo gallery",
+										 					 "Music",
+										 					 "Let's talk tv"]} />
 							</div>
 							<div className="col-sm-6 col-md-3">
 								{/* 其他選單 */}
 								<h3 className="block-title">Money</h3>
-								<ul className="nav">
-									<li><a href="#" className="nav-link">Quote board</a></li>
-					        <li><a href="#" className="nav-link">Best of 2013</a></li>
-					        <li><a href="#" className="nav-link">Showbiz tonight</a></li>
-					        <li><a href="#" className="nav-link">Fall entertainment 2013</a></li>
-					        <li><a href="#" className="nav-link">Photo gallery</a></li>
-					        <li><a href="#" className="nav-link">Music</a></li>
-					        <li><a href="#" className="nav-link">Let's talk tv</a></li>
-								</ul>
+								<Nav type="ul"
+										 content={['Quote board',
+										 					 'Best of 2013',
+										 					 "Showbiz tonight",
+										 					 "Fall entertainment 2013",
+										 					 "Photo gallery",
+										 					 "Music",
+										 					 "Let's talk tv"]} />
 							</div>
 							<div className="col-sm-6 col-md-3">
 								{/* 其他選單 */}
 								<h3 className="block-title">Tech</h3>
-								<ul className="nav">
-									<li><a href="#" className="nav-link">Quote board</a></li>
-					        <li><a href="#" className="nav-link">Best of 2013</a></li>
-					        <li><a href="#" className="nav-link">Showbiz tonight</a></li>
-					        <li><a href="#" className="nav-link">Fall entertainment 2013</a></li>
-					        <li><a href="#" className="nav-link">Photo gallery</a></li>
-					        <li><a href="#" className="nav-link">Music</a></li>
-					        <li><a href="#" className="nav-link">Let's talk tv</a></li>
-								</ul>
+								<Nav type="ul"
+										 content={['Quote board',
+										 					 'Best of 2013',
+										 					 "Showbiz tonight",
+										 					 "Fall entertainment 2013",
+										 					 "Photo gallery",
+										 					 "Music",
+										 					 "Let's talk tv"]} />
 							</div>
 							<div className="col-sm-6 col-md-3">
 								{/* 其他選單 */}
 								<h3 className="block-title">Sport</h3>
-								<ul className="nav">
-									<li><a href="#" className="nav-link">Quote board</a></li>
-					        <li><a href="#" className="nav-link">Best of 2013</a></li>
-					        <li><a href="#" className="nav-link">Showbiz tonight</a></li>
-					        <li><a href="#" className="nav-link">Fall entertainment 2013</a></li>
-					        <li><a href="#" className="nav-link">Photo gallery</a></li>
-					        <li><a href="#" className="nav-link">Music</a></li>
-					        <li><a href="#" className="nav-link">Let's talk tv</a></li>
-								</ul>
+								<Nav type="ul"
+										 content={['Quote board',
+										 					 'Best of 2013',
+										 					 "Showbiz tonight",
+										 					 "Fall entertainment 2013",
+										 					 "Photo gallery",
+										 					 "Music",
+										 					 "Let's talk tv"]} />
 							</div>
 						</div>
 
