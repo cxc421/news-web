@@ -49,22 +49,22 @@ const SiteSecondary = (props) => {
 						</div>
 
 						{/* 目錄 3 */}
-						<div className="col-lg-4 col-md-6 sm-hidden">
+						<div className="col-lg-4 col-md-6">
 							<Block title="Tech" img={img_6} />
 						</div>
 
 						{/* 目錄 4 */}
-						<div className="col-lg-4 col-md-6 sm-hidden">
+						<div className="col-lg-4 col-md-6">
 							<Block title="Sport" img={img_7} />
 						</div>
 
 						{/* 目錄 5 */}
-						<div className="col-lg-4 col-md-6 sm-hidden">
+						<div className="col-lg-4 col-md-6">
 							<Block title="Fashion" img={img_8} />
 						</div>
 
 						{/* 目錄 6 */}
-						<div className="col-lg-4 col-md-6 sm-hidden">
+						<div className="col-lg-4 col-md-6">
 							<Block title="Movie" img={img_9} />
 						</div>
 					</div>
