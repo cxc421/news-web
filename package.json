@@ -19,7 +19,8 @@
     "react": "^16.12.0",
     "react-bootstrap": "^0.31.2",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0"
+    "react-scripts": "3.3.0",
+    "serialize-javascript": "2.1.2"
   },
   "scripts": {
     "build-scss": "node-sass --output-style expanded src/scss/index.scss src/index.build.css",
