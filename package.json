@@ -4,6 +4,9 @@
   "private": true,
   "homepage": "https://cxc421.github.io/news-web",
   "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^3.3.7",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
@@ -13,10 +16,10 @@
     "normalize.css": "^7.0.0",
     "npm-run-all": "^4.0.2",
     "onchange": "^3.2.1",
-    "react": "^15.6.1",
+    "react": "^16.12.0",
     "react-bootstrap": "^0.31.2",
-    "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10"
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.3.0"
   },
   "scripts": {
     "build-scss": "node-sass --output-style expanded src/scss/index.scss src/index.build.css",
@@ -24,9 +27,24 @@
     "start-js": "react-scripts start",
     "start": "npm run build-scss && run-p watch-scss start-js",
     "build": "npm run build-scss && react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
